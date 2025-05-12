@@ -1,12 +1,8 @@
 ---
 layout: default
-
-title: Initial Startup
-
 parent: The Build
-
+title: Initial Startup
 nav_order: 5
-
 ---
 
 <link  rel="stylesheet"  href="style.css">
