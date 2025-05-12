@@ -34,7 +34,6 @@ Here we come to a choice. Do you want to use stock Klipper and macros to control
 
 The Kalico route will make things simpler from the configuration side, but in the end, your printer will home either way without too much fuss. Pick ONE of the two options below, either Stock Klipper or Kalico.
 
-
 ### Stock Klipper
 
 In this path, you will need to download some macros dependong on your printer. If you do not have a v0 or a 2.4, you can tweak whichever makes the most sense for you. When in doubt, ask in the Voron Discord channel for your printer
@@ -91,8 +90,6 @@ diag0_pin: ^!PD2
 driver_SGT: 1
 ```
 
-
-
 # Updating your configuration
 
 Regardless of the choice you made above, with the initial steps behind you, we now have to adjust some existing settings in the configuration file.
@@ -121,7 +118,6 @@ You may also need to tweak the `diag_pin` property to be either `diag0_pin` or `
     Example: `diag_pin: ^PG6`
 8. **Add** this below the `diag_pin` entry: `driver_SGTHRS: 255`
 
-
 For those of you that took the Kalico route above, add these lines below your `run_current` property:
 
 ```
@@ -142,7 +138,6 @@ The first property sets the current to use when doing sensorless homing. The sec
 7. **Add** `diag_pin` to match what you recorded from step 2, but add a ^ before it.
     Example: `diag_pin: ^PG9`
 8. **Add** this below the `diag_pin` entry: `driver_SGTHRS: 255`
-
 
 For those of you that took the Kalico route above, add this line below your `run_current` property:
 
@@ -234,7 +229,6 @@ Once homed, move away from the rail again.
     SET_TMC_CURRENT STEPPER=stepper_y CURRENT={RUN_CURRENT_Y}
 ```
 Finally, restore our motor's run current we captured before. 
-
 
 ### Kalico details
 
@@ -439,7 +433,6 @@ driver_SGTHRS: 125 # 255 is most sensitive value, 0 is least sensitive
 ```
 
 ### Manta M8P v1.1 with BTT 5160 PROs
-
 
 Note that this example uses Kalico, (use_sensorless_homing: True, home_current: 0.4, etc), so some of those parameters will not exist/be valid if not using Kalico
 
